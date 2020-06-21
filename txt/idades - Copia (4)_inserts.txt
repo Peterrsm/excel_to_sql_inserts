@@ -1,0 +1,1 @@
+INSERT INTO idades(Nome ,Sobrenome,Idade)VALUES('Pedro','Roberto','25'),('Bruna','Cristina','15'),('Nilson','Miranda','57')
