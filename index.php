@@ -1,21 +1,10 @@
 <?php
-    include 'PHPExcel/IOFactory.php';
+    //Remove WARNING
+    error_reporting(E_ERROR | E_PARSE);
 
-    $nomearquivo = "";
-    
-    /*
-    if($_POST["arquivoxls"]) {
-        $nomearquivo = "Recebido";
-     }
-     else{
-        $nomearquivo = "Não recebido";
-     }
-     */
-  
 ?>
 
-
-<h1>Selecionar Planilhas</h1>
+<h1>Gerar inserts</h1>
 
 <br>
 
@@ -24,13 +13,15 @@
         <p><?= $nomearquivo ?></p>
     </div>
     <div class="col-6">
-        <form method="POST" action="comparativo.php" enctype="multipart/form-data">
+        <form method="POST" action="gateway.php">
             <div class="form-group">
-                <label for="arquivoxls">XLS Planilha 1</label>
-                <input type="file" accept=".xls, .xlsx" id="arquivoxls" name="arquivoxls" required>
+                <label for="arquivoxls">Nome da tabela</label>
+                <input type="text" id="tabela" name="tabela" required>
             </div>
 
-            <button type="submit" class="btn">Selecionar Tab</button>
+            <br/>
+
+            <button type="submit" class="btn">Gerar TXT</button>
         </form>
     </div>
 </div>

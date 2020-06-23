@@ -10,7 +10,7 @@
     ajustaDiaUtil($aux->format('Y-m-d'));
 
     function ajustaDiaUtil($date){
-        $aux = new DateTime($date);;
+        $aux = new DateTime($date);
         if($aux->format('D') == 'Sat' || $aux->format('D') == 'Sun'){
             $aux = date_sub($aux,date_interval_create_from_date_string("01 days"));
         
